@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Noto+Sans+Display:wght@200;400;700&family=Nunito:wght@400;700&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/884d8ffe14.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="div1">
+        <h1>
+          <i
+            class="fa-solid fa-arrow-right"
+            id="barBotton"
+            onclick="recolherSidebar()"
+          ></i
+          ><span id="letraE">N</span>vision
+        </h1>
+        <h4>
+          <i class="fa-solid fa-magnifying-glass"></i
+          ><input type="text" placeholder="Search..." value="" />
+        </h4>
+      </div>
+      <hr />
+      <div id="div2">
+        <!-- <div>
+          <button id="teste">
+            <h4><i class="fa-solid fa-border-all"></i> Dashboard</h4>
+          </button>
+        </div> -->
+        <button class="bottons" id="botton1" onclick="funcao2(0)">
+          <h4><i class="fa-solid fa-border-all"></i> Dashboard</h4>
+        </button>
+        <button class="bottons" id="botton2" onclick="funcao2(1)">
+          <h4><i class="fa-regular fa-envelope"></i> Messagens</h4>
+        </button>
+      </div>
+      <hr />
+      <div id="div3">
+        <button class="bottons" id="botton3" onclick="funcao2(2)">
+          <h4><i class="fa-solid fa-earth-americas"></i> Departments</h4>
+          <h3 class="iconesarrow">
+            <i class="fa-solid fa-angle-down" id="arrow"></i>
+          </h3>
+        </button>
+        <button class="bottons" id="botton4" onclick="funcao2(3)">
+          <h4><i class="fa-regular fa-folder"></i> Projects</h4>
+        </button>
+        <button class="bottons" id="botton5" onclick="funcao2(4)">
+          <h4><i class="fa-regular fa-file-lines"></i> Invoice</h4>
+        </button>
+      </div>
+      <hr />
+      <div id="div4">
+        <button class="bottons" id="botton6" onclick="funcao2(5)">
+          <h4><i class="fa-solid fa-user-group"></i> Employees</h4>
+          <h3><i class="fa-solid fa-angle-down" id="arrow"></i></h3>
+        </button>
+        <button class="bottons" id="botton7" onclick="funcao2(6)">
+          <h4><i class="fa-solid fa-truck"></i> Shipment</h4>
+        </button>
+        <button class="bottons" id="botton8" onclick="funcao2(7)">
+          <h4><i class="fa-regular fa-compass"></i> Explore</h4>
+          <h3><i class="fa-solid fa-angle-down" id="arrow"></i></h3>
+        </button>
+      </div>
+    </div>
+    <script>
+      function funcao2(numero) {
+        let butao = document.getElementsByClassName("bottons");
+        let bottons = document.getElementsByClassName("bottons");
+        butao[numero].style.backgroundColor = "#3c4048";
+        butao[numero].style.width = "215px";
+        butao[numero].style.color = "whitesmoke";
+        butao[numero].style.borderBottomRightRadius = "0px";
+        butao[numero].style.borderTopRightRadius = "0px";
+        butao[numero].style.height = "50px";
+        butao[numero].style.paddingLeft = "35px";
+        butao[numero].style.fontSize = "18px";
+        butao[numero].style.transitionDuration = "0.2s";
+
+        for (i = 0; i < numero; i++) {
+          bottons[i].style.backgroundColor = "whitesmoke";
+          bottons[i].style.width = "180px";
+          bottons[i].style.color = "#3c4048";
+          bottons[i].style.borderBottomRightRadius = "0px";
+          bottons[i].style.borderTopRightRadius = "0px";
+          bottons[i].style.height = "50px";
+          bottons[i].style.paddingLeft = "0px";
+          bottons[i].style.transitionDuration = "0.2s";
+        }
+        for (i = numero + 1; i > numero && i <= 8; i++) {
+          bottons[i].style.backgroundColor = "whitesmoke";
+          bottons[i].style.width = "180px";
+          bottons[i].style.color = "#3c4048";
+          bottons[i].style.borderBottomRightRadius = "0px";
+          bottons[i].style.borderTopRightRadius = "0px";
+          bottons[i].style.height = "50px";
+          bottons[i].style.paddingLeft = "0px";
+          bottons[i].style.transitionDuration = "0.2s";
+        }
+      }
+
+      function recolherSidebar(numero) {
+        let barBotton = document.getElementById("barBotton");
+        numero % 2 == 0
+          ? (barBotton.style.color = "black")
+          : (barBotton.style.color = "white");
+        numero++;
+      }
+      /*let testevariavel = function () {
+        let botton1 = document.getElementById("botton1");
+        botton1.style.backgroundColor = "#3c4048";
+        botton1.style.width = "215px";
+        botton1.style.color = "whitesmoke";
+        botton1.style.borderBottomRightRadius = "0px";
+        botton1.style.borderTopRightRadius = "0px";
+        botton1.style.height = "50px";
+        botton1.style.paddingLeft = "60px";
+        botton1.style.fontSize = "18px";
+        botton1.style.transitionDuration = "0.2s";
+        let bottons = document.getElementsByClassName("bottons");
+        bottons[1].style.backgroundColor = "whitesmoke";
+        bottons[1].style.width = "180px";
+        bottons[1].style.color = "#3c4048";
+        bottons[1].style.borderBottomRightRadius = "0px";
+        bottons[1].style.borderTopRightRadius = "0px";
+        bottons[1].style.height = "50px";
+        bottons[1].style.paddingLeft = "0px";
+        bottons[1].style.transitionDuration = "0.2s";
+        return true;
+      };
+      //   function testevariavelout() {
+      //     let bottoN1 = document.getElementById("botton1");
+      //     bottoN1.style.backgroundColor = "whitesmoke";
+      //     botton1.style.width = "180px";
+      //     bottoN1.style.color = "#3c4048";
+      //     bottoN1.style.borderBottomRightRadius = "0px";
+      //     bottoN1.style.borderTopRightRadius = "0px";
+      //     bottoN1.style.height = "50px";
+      //     bottoN1.style.paddingLeft = "0px";
+
+      //     bottoN1.style.transitionDuration = "0.2s";
+      //   }
+      let testevariavel2 = function () {
+        let botton2 = document.getElementById("botton2");
+        botton2.style.backgroundColor = "#3c4048";
+        botton2.style.width = "215px";
+        botton2.style.color = "whitesmoke";
+        botton2.style.borderBottomRightRadius = "0px";
+        botton2.style.borderTopRightRadius = "0px";
+        botton2.style.height = "50px";
+        botton2.style.paddingLeft = "60px";
+        botton2.style.fontSize = "18px";
+        botton2.style.transitionDuration = "0.2s";
+        let bottons = document.getElementsByClassName("bottons");
+        bottons[0].style.backgroundColor = "whitesmoke";
+        bottons[0].style.width = "180px";
+        bottons[0].style.color = "#3c4048";
+        bottons[0].style.borderBottomRightRadius = "0px";
+        bottons[0].style.borderTopRightRadius = "0px";
+        bottons[0].style.height = "50px";
+        bottons[0].style.paddingLeft = "0px";
+        bottons[0].style.transitionDuration = "0.2s";
+        bottons[2].style.backgroundColor = "whitesmoke";
+        bottons[2].style.width = "180px";
+        bottons[2].style.color = "#3c4048";
+        bottons[2].style.borderBottomRightRadius = "0px";
+        bottons[2].style.borderTopRightRadius = "0px";
+        bottons[2].style.height = "50px";
+        bottons[2].style.paddingLeft = "0px";
+        bottons[2].style.transitionDuration = "0.2s";
+        bottons[3].style.backgroundColor = "whitesmoke";
+        bottons[3].style.width = "180px";
+        bottons[3].style.color = "#3c4048";
+        bottons[3].style.borderBottomRightRadius = "0px";
+        bottons[3].style.borderTopRightRadius = "0px";
+        bottons[3].style.height = "50px";
+        bottons[3].style.paddingLeft = "0px";
+        bottons[3].style.transitionDuration = "0.2s";
+        bottons[4].style.backgroundColor = "whitesmoke";
+        bottons[4].style.width = "180px";
+        bottons[4].style.color = "#3c4048";
+        bottons[4].style.borderBottomRightRadius = "0px";
+        bottons[4].style.borderTopRightRadius = "0px";
+        bottons[4].style.height = "50px";
+        bottons[4].style.paddingLeft = "0px";
+        bottons[4].style.transitionDuration = "0.2s";
+        bottons[5].style.backgroundColor = "whitesmoke";
+        bottons[5].style.width = "180px";
+        bottons[5].style.color = "#3c4048";
+        bottons[5].style.borderBottomRightRadius = "0px";
+        bottons[5].style.borderTopRightRadius = "0px";
+        bottons[5].style.height = "50px";
+        bottons[5].style.paddingLeft = "0px";
+        bottons[5].style.transitionDuration = "0.2s";
+        bottons[6].style.backgroundColor = "whitesmoke";
+        bottons[6].style.width = "180px";
+        bottons[6].style.color = "#3c4048";
+        bottons[6].style.borderBottomRightRadius = "0px";
+        bottons[6].style.borderTopRightRadius = "0px";
+        bottons[6].style.height = "50px";
+        bottons[6].style.paddingLeft = "0px";
+        bottons[6].style.transitionDuration = "0.2s";
+        bottons[7].style.backgroundColor = "whitesmoke";
+        bottons[7].style.width = "180px";
+        bottons[7].style.color = "#3c4048";
+        bottons[7].style.borderBottomRightRadius = "0px";
+        bottons[7].style.borderTopRightRadius = "0px";
+        bottons[7].style.height = "50px";
+        bottons[7].style.paddingLeft = "0px";
+        bottons[7].style.transitionDuration = "0.2s";
+        return true;
+      };
+      let testevariavel3 = function () {
+        let botton3 = document.getElementById("botton3");
+        botton3.style.backgroundColor = "#3c4048";
+        botton3.style.width = "215px";
+        botton3.style.color = "whitesmoke";
+        botton3.style.borderBottomRightRadius = "0px";
+        botton3.style.borderTopRightRadius = "0px";
+        botton3.style.height = "50px";
+        botton3.style.paddingLeft = "20px";
+        botton3.style.fontSize = "18px";
+        botton3.style.transitionDuration = "0.2s";
+        let bottons = document.getElementsByClassName("bottons");
+        bottons[0].style.backgroundColor = "whitesmoke";
+        bottons[0].style.width = "180px";
+        bottons[0].style.color = "#3c4048";
+        bottons[0].style.borderBottomRightRadius = "0px";
+        bottons[0].style.borderTopRightRadius = "0px";
+        bottons[0].style.height = "50px";
+        bottons[0].style.paddingLeft = "0px";
+        bottons[0].style.transitionDuration = "0.2s";
+        bottons[1].style.backgroundColor = "whitesmoke";
+        bottons[1].style.width = "180px";
+        bottons[1].style.color = "#3c4048";
+        bottons[1].style.borderBottomRightRadius = "0px";
+        bottons[1].style.borderTopRightRadius = "0px";
+        bottons[1].style.height = "50px";
+        bottons[1].style.paddingLeft = "0px";
+        bottons[2].style.transitionDuration = "0.2s";
+        bottons[3].style.backgroundColor = "whitesmoke";
+        bottons[3].style.width = "180px";
+        bottons[3].style.color = "#3c4048";
+        bottons[3].style.borderBottomRightRadius = "0px";
+        bottons[3].style.borderTopRightRadius = "0px";
+        bottons[3].style.height = "50px";
+        bottons[3].style.paddingLeft = "0px";
+        bottons[3].style.transitionDuration = "0.2s";
+        bottons[4].style.backgroundColor = "whitesmoke";
+        bottons[4].style.width = "180px";
+        bottons[4].style.color = "#3c4048";
+        bottons[4].style.borderBottomRightRadius = "0px";
+        bottons[4].style.borderTopRightRadius = "0px";
+        bottons[4].style.height = "50px";
+        bottons[4].style.paddingLeft = "0px";
+        bottons[4].style.transitionDuration = "0.2s";
+        bottons[5].style.backgroundColor = "whitesmoke";
+        bottons[5].style.width = "180px";
+        bottons[5].style.color = "#3c4048";
+        bottons[5].style.borderBottomRightRadius = "0px";
+        bottons[5].style.borderTopRightRadius = "0px";
+        bottons[5].style.height = "50px";
+        bottons[5].style.paddingLeft = "0px";
+        bottons[5].style.transitionDuration = "0.2s";
+        bottons[6].style.backgroundColor = "whitesmoke";
+        bottons[6].style.width = "180px";
+        bottons[6].style.color = "#3c4048";
+        bottons[6].style.borderBottomRightRadius = "0px";
+        bottons[6].style.borderTopRightRadius = "0px";
+        bottons[6].style.height = "50px";
+        bottons[6].style.paddingLeft = "0px";
+        bottons[6].style.transitionDuration = "0.2s";
+        bottons[7].style.backgroundColor = "whitesmoke";
+        bottons[7].style.width = "180px";
+        bottons[7].style.color = "#3c4048";
+        bottons[7].style.borderBottomRightRadius = "0px";
+        bottons[7].style.borderTopRightRadius = "0px";
+        bottons[7].style.height = "50px";
+        bottons[7].style.paddingLeft = "0px";
+        bottons[7].style.transitionDuration = "0.2s";
+        return true;
+      };
+      let testevariavel4 = function (botton4) {
+        botton4 = document.getElementById("botton4");
+        botton4.style.backgroundColor = "#3c4048";
+        botton4.style.width = "215px";
+        botton4.style.color = "whitesmoke";
+        botton4.style.borderBottomRightRadius = "0px";
+        botton4.style.borderTopRightRadius = "0px";
+        botton4.style.height = "50px";
+        botton4.style.paddingLeft = "60px";
+        botton4.style.fontSize = "18px";
+        botton4.style.transitionDuration = "0.2s";
+        let bottons = document.getElementsByClassName("bottons");
+        bottons[0].style.backgroundColor = "whitesmoke";
+        bottons[0].style.width = "180px";
+        bottons[0].style.color = "#3c4048";
+        bottons[0].style.borderBottomRightRadius = "0px";
+        bottons[0].style.borderTopRightRadius = "0px";
+        bottons[0].style.height = "50px";
+        bottons[0].style.paddingLeft = "0px";
+        bottons[0].style.transitionDuration = "0.2s";
+        bottons[2].style.backgroundColor = "whitesmoke";
+        bottons[2].style.width = "180px";
+        bottons[2].style.color = "#3c4048";
+        bottons[2].style.borderBottomRightRadius = "0px";
+        bottons[2].style.borderTopRightRadius = "0px";
+        bottons[2].style.height = "50px";
+        bottons[2].style.paddingLeft = "0px";
+        bottons[2].style.transitionDuration = "0.2s";
+        bottons[1].style.backgroundColor = "whitesmoke";
+        bottons[1].style.width = "180px";
+        bottons[1].style.color = "#3c4048";
+        bottons[1].style.borderBottomRightRadius = "0px";
+        bottons[1].style.borderTopRightRadius = "0px";
+        bottons[1].style.height = "50px";
+        bottons[1].style.paddingLeft = "0px";
+        bottons[1].style.transitionDuration = "0.2s";
+        bottons[4].style.backgroundColor = "whitesmoke";
+        bottons[4].style.width = "180px";
+        bottons[4].style.color = "#3c4048";
+        bottons[4].style.borderBottomRightRadius = "0px";
+        bottons[4].style.borderTopRightRadius = "0px";
+        bottons[4].style.height = "50px";
+        bottons[4].style.paddingLeft = "0px";
+        bottons[4].style.transitionDuration = "0.2s";
+        bottons[5].style.backgroundColor = "whitesmoke";
+        bottons[5].style.width = "180px";
+        bottons[5].style.color = "#3c4048";
+        bottons[5].style.borderBottomRightRadius = "0px";
+        bottons[5].style.borderTopRightRadius = "0px";
+        bottons[5].style.height = "50px";
+        bottons[5].style.paddingLeft = "0px";
+        bottons[5].style.transitionDuration = "0.2s";
+        bottons[6].style.backgroundColor = "whitesmoke";
+        bottons[6].style.width = "180px";
+        bottons[6].style.color = "#3c4048";
+        bottons[6].style.borderBottomRightRadius = "0px";
+        bottons[6].style.borderTopRightRadius = "0px";
+        bottons[6].style.height = "50px";
+        bottons[6].style.paddingLeft = "0px";
+        bottons[6].style.transitionDuration = "0.2s";
+        bottons[7].style.backgroundColor = "whitesmoke";
+        bottons[7].style.width = "180px";
+        bottons[7].style.color = "#3c4048";
+        bottons[7].style.borderBottomRightRadius = "0px";
+        bottons[7].style.borderTopRightRadius = "0px";
+        bottons[7].style.height = "50px";
+        bottons[7].style.paddingLeft = "0px";
+        bottons[7].style.transitionDuration = "0.2s";
+        return true;
+      };*/
+    </script>
+  </body>
+</html>

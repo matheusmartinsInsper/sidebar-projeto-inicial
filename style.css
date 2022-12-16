@@ -1,0 +1,112 @@
+body {
+  background-color: #3c4048;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+hr {
+  display: block;
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px;
+}
+#letraE {
+  color: #00abb3;
+}
+#sidebar > div > h1 > i {
+  color: #04939b;
+}
+#sidebar {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  width: 250px;
+  box-sizing: border-box;
+  align-items: center;
+  height: 53rem;
+  justify-content: center;
+  row-gap: 0px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: whitesmoke;
+}
+#sidebar > div {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  padding: 10px 0px;
+  margin: 1px 0px;
+}
+#div1 {
+  padding-bottom: 22px;
+  padding-top: 32px;
+}
+#div1 > h1 {
+  margin-bottom: 25px;
+}
+#div1 > h4 > input {
+  padding: 4px;
+  height: 40px;
+  border: none;
+  background-color: #eceaea;
+  padding-left: 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+#sidebar > div > button {
+  height: 50px;
+  color: #504e4e;
+  border: none;
+  height: 40px;
+  margin: 5px 0px;
+  border-radius: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10 0px;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+#sidebar > div > button > h4 > i {
+  margin-right: 6px;
+}
+#sidebar > div > button > h4 {
+  font-size: 16px;
+}
+#teste {
+  width: 220px;
+  background-color: #3c4048;
+  border: none;
+  height: 48px;
+  margin: 5px 0px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  color: whitesmoke;
+  padding-left: 60px;
+  font-size: 17px;
+}
+
+#sidebar > div > h4 {
+  display: flex;
+  align-items: center;
+  margin-left: -10px;
+}
+#sidebar > div > h4 > i {
+  margin-right: -24px;
+  z-index: 1;
+  color: #686666;
+  cursor: pointer;
+}
+#sidebar > div > h1 > i {
+  cursor: pointer;
+}
+/*  criando seta */
+.bottons > h4 > i {
+  font-size: 18px;
+}
